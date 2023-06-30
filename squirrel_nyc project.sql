@@ -1,3 +1,6 @@
+--The dataset was taken from: https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw--
+
+
 SELECT * FROM squirrel.data;
 
 -- 1. Firstly I will count how many unique squirrels were observed: --
@@ -50,7 +53,7 @@ GROUP BY AGE
 ORDER BY RUNNING DESC;
 -- Adults squirrels run more than young juvenile squirrels.--
 
--- 7. I will check if squirrel approached human more times--
+-- 7. I will check if which squirrel approached human more times--
 SELECT AGE, APPROACHES, COUNT(APPROACHES) AS `Number of APPROACHES`
 FROM squirrel.data
 WHERE AGE IS NOT NULL AND APPROACHES = 'true'
