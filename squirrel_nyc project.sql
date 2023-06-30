@@ -53,7 +53,7 @@ GROUP BY AGE
 ORDER BY RUNNING DESC;
 -- Adults squirrels run more than young juvenile squirrels.--
 
--- 7. I will check if which squirrel approached human more times--
+-- 7. I will check which squirrel approached human more times--
 SELECT AGE, APPROACHES, COUNT(APPROACHES) AS `Number of APPROACHES`
 FROM squirrel.data
 WHERE AGE IS NOT NULL AND APPROACHES = 'true'
